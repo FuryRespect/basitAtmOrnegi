@@ -2,63 +2,64 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Giriş seviye BASİT ATM ALGORİTMASI
+
         Scanner scanner = new Scanner(System.in);
-        int bakiye = 1000;
-        String isim;
-        String tus;
-        // System.out.println("deneme \ndeneme");
+        int balance = 1000;
+        String name;
+        String key;
 
         System.out.println("Adınız ?");
-        isim = scanner.nextLine();
+        name = scanner.nextLine();
         // MENU
         System.out.println("_____________________");
-        System.out.println("* Merhaba " + isim);
+        System.out.println("* Merhaba " + name);
         System.out.println("* ATM'ye Hoşgeldin");
         System.out.println("_____________________");
 
         // NEXT MENU
-        System.out.println("İşleme devam etmek için bir tuşa tıklayın");
-        tus = scanner.nextLine();
-        // ATM MENUSU
+        //System.out.println("İşleme devam etmek için bir tuşa tıklayın");
+        // key = scanner.nextLine();
+
+        // ATM MENU
         System.out.println("1. Bakiye Görüntüle \n2. Para Yatırma \n3. Para Çekme \n4. EFT - Havale İşlemleri \n5. Çıkış ");
         //System.out.println("2. Para Yatırma");
         //System.out.println("3. Para Çekme");
         //System.out.println("4. Çıkış");
+
         int atm = scanner.nextInt();
-        // ISLEMLER
+        // procces
         switch (atm) {
-            // bakiye gor
+            //wallet balance
             case 1:
-                System.out.println("Bakiye: " + bakiye);
+                System.out.println("Bakiye: " + balance);
                 break;
-            // PARA YATIR
+            // deposit money
             case 2:
-                int miktar;
+                int amount;
                 System.out.println("--Para Yatır--");
                 System.out.println("Yatıralacak Miktar: ");
-                miktar = scanner.nextInt();
-                bakiye += miktar;
-                System.out.println("Para Yatırıldı: "+ bakiye);
+                amount = scanner.nextInt();
+                balance += amount;
+                System.out.println("Para Yatırıldı: "+ balance);
                 break;
-            // PARA CEK
+            // withdraw money
             case 3:
                 System.out.println("Çekilecek miktarı giriniz: ");
-                miktar = scanner.nextInt();
+                amount = scanner.nextInt();
 
-                if (miktar > bakiye){
+                if (amount > balance){
                     System.out.println("Yetersiz Bakiye.");
                     return;
 
-                }else if (miktar < bakiye){
+                }else if (amount < balance){
                     System.out.println("Çekilecek miktarı giriniz: ");
-                    miktar = scanner.nextInt();
-                    miktar -= bakiye;
-                    System.out.println("Para Çekildi: "+ bakiye);
+                    amount = scanner.nextInt();
+                    amount -= balance;
+                    System.out.println("Para Çekildi: "+ balance);
                 }
 
                 break;
-            // EFT - HAVALE
+            // remittance transfer
             case 4:
                 System.out.println("-----BAKIMDA-----");
                 break;

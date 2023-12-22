@@ -1,2 +1,2 @@
-# basitAtmOrnegi
-Giriş Seviye Java ATM Örneği
+# AtmOrnegi
+Java ATM Örneği

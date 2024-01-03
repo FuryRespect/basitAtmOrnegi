@@ -1,2 +1,0 @@
-# AtmOrnegi
-Java ATM Örneği

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# AtmOrnegi
-Java ATM Örneği
-=======
-  #ATMCalismaOrnegi
+
+  #ATM Calisma Ornegi
 Do-While döngüsü ile atm çalışmam
->>>>>>> 3bcc906802394d0b61953383920867a2e467022d
